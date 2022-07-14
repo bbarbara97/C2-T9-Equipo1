@@ -4,4 +4,5 @@ public class Electrodomestico {
 
 	//SuperClase electrodomestico
 	//Test 2
+	// Muchas pruebas
 }
