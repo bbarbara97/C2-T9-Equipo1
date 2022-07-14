@@ -1,6 +1,6 @@
 package ex2;
 
-public class Serie {
+public class Serie implements Entregable{
 
 	protected String titulo;
 	protected int nTemporadas;
@@ -40,6 +40,23 @@ public class Serie {
 		this.creador = creador;
 	}
 	
+	//Métodos
+	public void entregar() {
+		entregado = true;
+	}
+	
+	public void devolver() {
+		entregado = false;
+	}
+	
+	public boolean isEntregado() {
+		
+		return true;
+	}
+	
+	public void compareTo(Object a) {
+		
+	}
 	
 	//Getters y Setters
 
