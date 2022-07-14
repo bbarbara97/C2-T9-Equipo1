@@ -1,6 +1,6 @@
 package ex1;
 
-public class Lavadora {
+public class Lavadora extends Electrodomestico{
 	
 	private double carga;
 	
@@ -11,12 +11,12 @@ public class Lavadora {
 			this.carga = CARGA_D;
 		}
 		
-		public Lavadora(double precioBase, double peso) {
+		public Lavadora(Double precioBase, Double peso) {
 			super(precioBase, peso);
 			this.carga = CARGA_D;
 		}
 		
-		public Lavadora(double precioBase, double peso, String color, char consumo) {
+		public Lavadora(Double precioBase, Double peso, String color, char consumo) {
 			super(precioBase, peso, color, consumo);
 			this.carga = CARGA_D;
 		}
