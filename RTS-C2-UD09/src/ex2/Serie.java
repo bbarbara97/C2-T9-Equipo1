@@ -23,7 +23,6 @@ public class Serie implements Entregable{
 	}
 
 	public Serie(String titulo, String creador) {
-		super();
 		this.titulo = titulo;
 		this.nTemporadas = N_TEMPORADAS;
 		this.entregado = ENTREGADO_D;
@@ -32,7 +31,6 @@ public class Serie implements Entregable{
 	}
 
 	public Serie(String titulo, int nTemporadas, String genero, String creador) {
-		super();
 		this.titulo = titulo;
 		this.nTemporadas = nTemporadas;
 		this.entregado = ENTREGADO_D;
