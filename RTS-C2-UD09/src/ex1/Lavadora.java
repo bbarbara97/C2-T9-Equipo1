@@ -10,5 +10,10 @@ public class Lavadora {
 		public Lavadora() {
 			this.carga = CARGA_D;
 		}
+		
+		public Lavadora(double precioBase, double peso) {
+			super(precioBase, peso);
+			this.carga = CARGA_D;
+		}
 
 }
