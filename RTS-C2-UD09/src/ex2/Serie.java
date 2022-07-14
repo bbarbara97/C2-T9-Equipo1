@@ -54,9 +54,20 @@ public class Serie implements Entregable{
 		return true;
 	}
 	
-	public void compareTo(Object a) {
-		
+	public int compareTo(Object a) {
+
+		int estado =-1;
+
+		if(this.nTemporadas ==((Serie) a).getnTemporadas()) {
+			//Las horas son iguales
+			estado =0;
+		}else if (this.nTemporadas>((Serie) a).getnTemporadas()) {
+			//El objeto 1 es mayor que la pasada por parametro
+			estado=1;
+		}
+		return estado;
 	}
+
 	
 	//Getters y Setters
 
