@@ -3,7 +3,6 @@ package ex1;
 public class mainApp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		Electrodomestico[] electrodomesticos = new Electrodomestico[10];
 
@@ -20,27 +19,29 @@ public class mainApp {
 		electrodomesticos[9] = new Television(150.0, 150.0, "negro", 'E',40.0, true);
 
 		for(int i = 0; i < 10; i++) {
-
 			electrodomesticos[i].precioFinal();
-			System.out.println(electrodomesticos[i].getConsumo() + " Precio: " + electrodomesticos[i].getPrecioFinal() + " €.");
 		}
 
+		double precioTvs=0, precioLavadoras = 0;
 		for(int i =0; i<10; i++) {
 
 			if(electrodomesticos[i] instanceof Lavadora) {
-				System.out.println("El precio de las Lavadoras es " +electrodomesticos[i].getPrecioFinal());
+				precioTvs += electrodomesticos[i].getPrecioFinal();
 			}
 			if(electrodomesticos[i] instanceof Television) {
-				System.out.println("El precio de las Televisiones es " +electrodomesticos[i].getPrecioFinal());
+				precioLavadoras += electrodomesticos[i].getPrecioFinal();
 			}
 		}
+		
+		System.out.println("El precio total de las lavadoras es: " + precioLavadoras + " €");
+		System.out.println("El precio total de las televisiones es: " + precioTvs + " €");
 		
 		double precioSuma =0;
 		
 		for(int i=0; i<10; i++) {
 			precioSuma += electrodomesticos[i].getPrecioFinal();
 		}
-			System.out.print("El precio total de los electrodomesticos es:" +precioSuma);
+		System.out.print("El precio total de los electrodomesticos es: " + precioSuma + " €");
 
 
 	}
