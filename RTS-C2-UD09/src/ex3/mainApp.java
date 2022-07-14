@@ -15,8 +15,10 @@ public class mainApp {
 		
 		if(Libros[0].getnPaginas()>Libros[1].getnPaginas()) {
 			System.out.println("El libro con más paginas es: " + Libros[0].toString());
-		} else {
+		} else if(Libros[0].getnPaginas()<Libros[1].getnPaginas()){
 			System.out.println("El libro con más paginas es: " + Libros[1].toString());
+		}else {
+			System.out.println("Los dos libros tienen el mismo número de páginas.\n\t" + Libros[0].toString() + "\n\t" + Libros[1].toString());
 		}
 	}
 

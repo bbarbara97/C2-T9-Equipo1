@@ -44,7 +44,7 @@ public class Libro {
 	
 	@Override
 	public String toString() {
-		return "El libro con " +isbn+ " creado por el autor " + autor + " tiene " +  nPaginas + " páginas.";
+		return "El libro con ISBN " +isbn+ " creado por el autor " + autor + " tiene " +  nPaginas + " páginas.";
 	}
 	
 	
