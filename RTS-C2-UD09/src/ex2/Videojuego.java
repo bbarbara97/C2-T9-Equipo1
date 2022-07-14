@@ -30,7 +30,7 @@ public class Videojuego implements Entregable {
 	}
 
 	public Videojuego(String titulo, int nHoras, String genereo, String compañia) {
-		this.titulo = "";
+		this.titulo = titulo;
 		this.nHoras = nHoras;
 		this.entregado = ENTREGADO_D;
 		this.genero = genereo;
