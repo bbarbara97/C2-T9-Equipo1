@@ -42,16 +42,16 @@ public class Serie implements Entregable{
 	
 	//Métodos
 	public void entregar() {
-		entregado = true;
+		this.entregado = true;
 	}
 	
 	public void devolver() {
-		entregado = false;
+		this.entregado = false;
 	}
 	
 	public boolean isEntregado() {
 		
-		return true;
+		return this.entregado;
 	}
 	
 	public void compareTo(Object a) {
