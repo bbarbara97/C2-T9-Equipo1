@@ -15,5 +15,17 @@ public class Lavadora {
 			super(precioBase, peso);
 			this.carga = CARGA_D;
 		}
+		
+		public Lavadora(double precioBase, double peso, String color, char consumo) {
+			super(precioBase, peso, color, consumo);
+			this.carga = CARGA_D;
+		}
 
+		//Getters
+		public double getCarga() {
+			return carga;
+		}
+		
+		//Metodos
+		
 }
