@@ -2,13 +2,13 @@ package ex3;
 
 public class Libro {
 
-	private int isbn;
+	private String isbn;
 	private String titulo;
 	private String autor;
 	private int nPaginas;
 	
 	//Constructor
-	public Libro(int isbn, String titulo, String autor, int nPaginas) {
+	public Libro(String isbn, String titulo, String autor, int nPaginas) {
 		this.isbn = isbn;
 		this.titulo = titulo;
 		this.autor = autor;
@@ -17,10 +17,10 @@ public class Libro {
 	
 	
 	//Getters y Setters
-	public int getIsbn() {
+	public String getIsbn() {
 		return isbn;
 	}
-	public void setIsbn(int isbn) {
+	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
 	public String getTitulo() {
@@ -42,11 +42,9 @@ public class Libro {
 		this.nPaginas = nPaginas;
 	}
 	
-	
-	
 	@Override
 	public String toString() {
-		return "El libro con ISBN creado por el autor " + autor + " tiene" +  nPaginas + "páginas.";
+		return "El libro con " +isbn+ " creado por el autor " + autor + " tiene " +  nPaginas + " páginas.";
 	}
 	
 	
