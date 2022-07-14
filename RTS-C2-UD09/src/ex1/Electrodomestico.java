@@ -50,11 +50,11 @@ public class Electrodomestico {
 			this.color = "blanco";
 	}
 	
-	
-	/////				GETTERS				//////
 	protected void precioFinal() {
 		
 	}
+	
+/////				GETTERS				//////
 	
 	public Double getPrecioBase() {
 		return precioBase;
