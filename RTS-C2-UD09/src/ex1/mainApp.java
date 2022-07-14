@@ -22,7 +22,7 @@ public class mainApp {
 		for(int i = 0; i < 10; i++) {
 			
 			electrodomesticos[i].precioFinal();
-			System.out.println("Precio:" + electrodomesticos[i].getPrecioFinal() + "€.");
+			System.out.println(electrodomesticos[i].getConsumo() + " Precio: " + electrodomesticos[i].getPrecioFinal() + " €.");
 		}
 		
 		
