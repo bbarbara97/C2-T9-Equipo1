@@ -21,7 +21,7 @@ public class Serie implements Entregable{
 		this.genero = "";
 		this.creador = "";
 	}
-	
+
 	public Serie(String titulo, String creador) {
 		super();
 		this.titulo = titulo;
@@ -39,21 +39,21 @@ public class Serie implements Entregable{
 		this.genero = genero;
 		this.creador = creador;
 	}
-	
+
 	//Métodos
 	public void entregar() {
 		this.entregado = true;
 	}
-	
+
 	public void devolver() {
 		this.entregado = false;
 	}
-	
+
 	public boolean isEntregado() {
-		
+
 		return this.entregado;
 	}
-	
+
 	public int compareTo(Object a) {
 
 		int estado =-1;
@@ -68,7 +68,7 @@ public class Serie implements Entregable{
 		return estado;
 	}
 
-	
+
 	//Getters y Setters
 
 	public String getTitulo() {
@@ -108,7 +108,7 @@ public class Serie implements Entregable{
 		return "Serie [titulo=" + titulo + ", nTemporadas=" + nTemporadas + ", entregado=" + entregado + ", genero="
 				+ genero + ", creador=" + creador + "]";
 	}
-	
-	
+
+
 
 }
