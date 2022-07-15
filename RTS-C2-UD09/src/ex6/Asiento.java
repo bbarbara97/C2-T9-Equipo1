@@ -48,6 +48,11 @@ public class Asiento {
 	public String getId() {
 		return id;
 	}
+
+	public void setOcupante(Espectador ocupante) {
+		this.ocupante = ocupante;
+	}
+	
 	
 	
 	

@@ -50,12 +50,25 @@ public class Sala {
 
 		if(lleno() == false) {
 			for(Espectador e:espectadores) {
-				asientosOcupados();
+				int col =(int) (Math.random()*25+1);
+				int fil = (int) (Math.random()*10+1);
+				if(e.getDinero() >= this.precio && e.getEdad() >= pelicula.getEdadMinima()) {
+					if(asientos[fil][col] == null) {
+						asientos[fil][col].setOcupante(e);
+					}
+				}
+				
 			}
 		}
 	}
 	private boolean lleno() {
-
+		for(int i=0; i<nFilas; i++) {
+			for(int j=0; j<nColumnas; j++) {
+				if(asientos[i][j] == null) {
+					return false;
+				}
+			}
+		}
 		return true;
 	}
 
