@@ -13,6 +13,8 @@ public class mainApp {
 				new Estudiante("Marta",17,"Mujer",3.7),
 				new Estudiante("Elena",16,"Mujer",9.8)};
 
-		Aula aula = new Aula(1,6,"matemáticas",profesor2.getNombre(),alumnos[2]);
+		Aula aula = new Aula(1,3,"matemáticas",profesor2,alumnos);
+		
+		aula.darClase(aula);
 	}
 }
