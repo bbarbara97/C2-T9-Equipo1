@@ -11,10 +11,9 @@ public class Profesor extends Persona{
 	protected final ArrayList<String> MATERIAS = new ArrayList<>(Arrays.asList(arrayMaterias));
 
 	//Constructores
-	public Profesor(String materia, String[] arrayMaterias) {
-		super();
+	public Profesor(String nombre, int edad, String sexo, String materia) {
+		super(nombre,edad,sexo);
 		this.materia = materia;
-		this.arrayMaterias = arrayMaterias;
 	}
 
 	//Metodos

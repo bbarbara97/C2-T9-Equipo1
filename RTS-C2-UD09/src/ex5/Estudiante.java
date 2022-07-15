@@ -5,8 +5,8 @@ public class Estudiante extends Persona{
 	private Double calificaion; 	//0 - 10
 
 	//Constructores
-	public Estudiante(Double calificaion) {
-		super();
+	public Estudiante(String nombre, int edad, String sexo, Double calificaion) {
+		super(nombre,edad,sexo);
 		this.calificaion = calificaion;
 	}
 
