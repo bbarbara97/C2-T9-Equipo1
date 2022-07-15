@@ -8,7 +8,6 @@ public class Raices {
 
 	//Constructor
 	public Raices(int a, int b, int c) {
-		super();
 		this.a = a;
 		this.b = b;
 		this.c = c;
@@ -16,18 +15,24 @@ public class Raices {
 
 	//Métodos
 	public double getDiscriminante(){
-
-		return 0.0;
+		
+		return Math.pow(b, 2) - 4*a - c;
 	}
 
 	public boolean tieneRaices(){
 
-		return true;
+		if(getDiscriminante()>=0)
+			return true;
+		else
+			return false;
+		
 	}
 
 	public boolean tieneRaiz(){
-
-		return true;
+		if(getDiscriminante()==0)
+			return true;
+		else
+			return false;
 	}
 
 	public void calcular(){
