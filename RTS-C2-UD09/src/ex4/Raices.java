@@ -16,7 +16,7 @@ public class Raices {
 	//Métodos
 	public double getDiscriminante(){
 		
-		return Math.pow(b, 2) - 4*a - c;
+		return Math.pow(b, 2) - 4*a*c;
 	}
 
 	public boolean tieneRaices(){
@@ -36,14 +36,28 @@ public class Raices {
 	}
 
 	public void calcular(){
-
+		
+		double resultado =	(-b+getDiscriminante()/(4*a*c))/(2*a);
+		double resultado1 = (+b+getDiscriminante()/(4*a*c))/(2*a);
+		
+		System.out.println("Las soluciones posibles són: " +resultado+ " o " +resultado1);
+		
 	}
 
 	public void obtenerRaices(){
+		
+		double resultado= -getDiscriminante();
+		double resultado1 = +getDiscriminante();
+		
+		System.out.println("Las soluciones posibles són: " +resultado+ " o " +resultado1);
 
 	}
 
 	public void obtenerRaiz(){
+		if(tieneRaiz() == true) {
+			
+			System.out.println("Las soluciones posibles són: " +getDiscriminante());
+		}
 
 	}
 
