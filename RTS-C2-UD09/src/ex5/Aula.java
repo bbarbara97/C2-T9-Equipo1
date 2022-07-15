@@ -7,30 +7,56 @@ public class Aula {
 	
 	private int id;
 	private int maxEstudiantes;
-	private String[] arrayMaterias = {"matemáticas", "filosofía", "física"};
-	private final ArrayList<String> MATERIAS = new ArrayList<>(Arrays.asList(arrayMaterias));
+	private String materia;
 	Profesor profesor;
 	Estudiante estudiantes[];
 
 	//Constructores
 	
-	public Aula(int id, int maxEstudiantes, String[] arrayMaterias, Profesor profesor, Estudiante[] estudiantes) {
+	public Aula(int id, int maxEstudiantes, String materia, Profesor profesor, Estudiante[] estudiantes) {
 		super();
 		this.id = id;
 		this.maxEstudiantes = maxEstudiantes;
-		this.arrayMaterias = arrayMaterias;
+		this.materia = materia;
 		this.profesor = profesor;
 		this.estudiantes = estudiantes;
 	}
 
 	//Métodos
 	public void darClase(Aula aula) {
-		if(aula.getProfesor().estaDisponible() == true && aula.getMATERIAS().equals(aula.getProfesor().getMateria()) && aula.getEstudiantes().length >= (aula.getMaxEstudiantes() / 2)){
+		int nAlumnos = 0;
+		int alumnosAsistentes = 0;
+		int contadorH = 0;
+		int contadorM = 0;
+		
+		for(Estudiante a:aula.getEstudiantes()) {
+			if(a.estaDisponible()) {
+				alumnosAsistentes ++;
+				
+			}
+			nAlumnos++;
+			if(a.getSexo().equals("Hombre") && a.getCalificaion() >= 5) {
+				contadorH++;
+			} else if(a.getCalificaion() >= 5) {
+				contadorM++;
+			}
+		}
+		
+		
+		if(aula.getProfesor().estaDisponible() == true && aula.getMaterias().equals(aula.getProfesor().getMateria()) 
+				&& aula.getEstudiantes().length >= (aula.getMaxEstudiantes() / 2) && alumnosAsistentes > nAlumnos/2){
+			
 			System.out.println("Si se puede dar la clase.");
+			
+			System.out.println("Alumnos aprobados: " + contadorH);
+			System.out.println("Alumnas aprobadas: "+ contadorM);
+			
 			
 		} else {
 			System.out.println("No se puede dar la clase.");
 		}
+		
+		
 	}
 	
 	
@@ -67,8 +93,8 @@ public class Aula {
 		this.estudiantes = estudiantes;
 	}
 
-	public ArrayList<String> getMATERIAS() {
-		return MATERIAS;
+	public String getMaterias() {
+		return materia;
 	}
 	
 	
