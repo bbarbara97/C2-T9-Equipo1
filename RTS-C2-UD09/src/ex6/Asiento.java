@@ -16,6 +16,12 @@ public class Asiento {
 		this.id = Integer.toString(fila) + columna;
 	}
 
+	public void llenarAsiento(Espectador ocupante) {
+		if(isDisponible()) {
+			this.ocupante = ocupante;
+			this.disponible = false;
+		}
+	}
 
 	public int getFila() {
 		return fila;
