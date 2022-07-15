@@ -6,7 +6,7 @@ public class mainApp {
 		// TODO Auto-generated method stub
 		
 		 
-		 Raices raices = new Raices(1, 4, 6);
+		 Raices raices = new Raices(-1, 7, -10);
 		 
 		raices.calcular();
 		
