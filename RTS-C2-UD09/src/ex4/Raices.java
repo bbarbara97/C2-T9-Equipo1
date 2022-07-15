@@ -56,7 +56,7 @@ public class Raices {
 			double resultado= -Math.sqrt(getDiscriminante());
 			double resultado1 = +Math.sqrt(getDiscriminante());
 
-			System.out.println("Las reices són: " +resultado+ " o " +resultado1);
+			System.out.println("Las raices són: " +resultado+ " o " +resultado1);
 		}
 	}
 
