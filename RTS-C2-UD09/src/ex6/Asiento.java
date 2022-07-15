@@ -20,6 +20,8 @@ public class Asiento {
         if(isDisponible()) {
             this.ocupante = ocupante;
             this.disponible = false;
+        }else {
+        	System.out.println("Asiento " +fila+ "/" +columna+ " esta ocupado");
         }
     }
 
