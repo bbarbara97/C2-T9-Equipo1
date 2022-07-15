@@ -37,8 +37,9 @@ public class Raices {
 
 	public void calcular(){
 		
-		double resultado =	(-b+getDiscriminante()/(4*a*c))/(2*a);
-		double resultado1 = (+b+getDiscriminante()/(4*a*c))/(2*a);
+		//Resultado erroneo
+		double resultado =	(-b-Math.sqrt(getDiscriminante())/(2*a));
+		double resultado1 = (-b+Math.sqrt(getDiscriminante())/(2*a));
 		
 		System.out.println("Las soluciones posibles són: " +resultado+ " o " +resultado1);
 		

@@ -5,6 +5,10 @@ public class mainApp {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		 
+		 Raices raices = new Raices(2, 4, 6);
+		 
+		raices.calcular();
 		}
 
 }
