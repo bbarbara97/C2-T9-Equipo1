@@ -16,7 +16,7 @@ public class Sala {
 		crearSala(nFilas, nColumnas);
 	}
 
-	private void crearSala(int nFilas, int nColumnas) {
+	public void crearSala(int nFilas, int nColumnas) {
 		int filas = asientos.length;
 		for(int i=0; i<asientos.length; i++) {
 			for(int j=0; j<asientos[0].length; j++) {
@@ -26,7 +26,7 @@ public class Sala {
 		}
 	}
 
-	private void comprobarNColumnas(int nColumnas) {
+	public void comprobarNColumnas(int nColumnas) {
 		if(nColumnas>25) {
 			this.nColumnas = 25;
 		}else {
@@ -34,13 +34,13 @@ public class Sala {
 		}
 	}
 
-	private int numAsientos() {
+	public int numAsientos() {
 		int totalAsientos = 0;
 		totalAsientos = nColumnas*nFilas;
 		return totalAsientos;
 	}
 
-	private int asientosOcupados(){
+	public int asientosOcupados(){
 		int totalOcupados = 0;
 		for(int i=0; i>=numAsientos(); i++) {
 			//totalOcupados += llenarSala();
@@ -66,7 +66,7 @@ public class Sala {
 			}
 		}
 	}
-	private boolean lleno() {
+	public boolean lleno() {
 		for(int i=0; i<asientos.length; i++) {
 			for(int j=0; j<asientos[0].length; j++) {
 				if(asientos[i][j] == null) {
@@ -75,6 +75,21 @@ public class Sala {
 			}
 		}
 		return true;
+	}
+	
+	public void asientosTotal() {
+		System.out.println("Hay en total: "+ (nColumnas * nFilas) + " asientos.");
+		
+		int cont = 0;
+		for(int i=0; i<asientos.length; i++) {
+			for(int j=0; j<asientos[0].length; j++) {
+				if(asientos[i][j] != null) {
+					cont++;
+					break;
+				}
+			}
+		}
+		System.out.println("Hay en total: " + cont + " asientos ocupados.");
 	}
 
 	public int getnFilas() {
