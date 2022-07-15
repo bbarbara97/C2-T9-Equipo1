@@ -7,7 +7,7 @@ public class Espectador {
 	private Double dinero;
 	
 	
-	public Espectador(String nombre, int edad, Double dinero) {
+	public Espectador(String nombre) {
 		this.nombre = nombre;
 		this.edad = (int) (Math.random()*25+1);
 		this.dinero = (Double) (Math.random()*20+1);
@@ -27,6 +27,13 @@ public class Espectador {
 	public Double getDinero() {
 		return dinero;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Espectador [nombre=" + nombre + ", edad=" + edad + ", dinero=" + dinero + "]";
+	}
+	
 	
 	
 

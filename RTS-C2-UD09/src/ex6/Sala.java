@@ -17,10 +17,12 @@ public class Sala {
 	}
 
 	private void crearSala(int nFilas, int nColumnas) {
-		for(int i=0; i<nFilas; i++) {
-			for(int j=0; j<nColumnas; j++) {
-				asientos[i][j] = new Asiento((i+1), (char)(j+65));
+		int filas = asientos.length;
+		for(int i=0; i<asientos.length; i++) {
+			for(int j=0; j<asientos[0].length; j++) {
+				asientos[i][j] = new Asiento(filas, (char)(j+65));
 			}
+			filas--;
 		}
 	}
 
@@ -57,13 +59,16 @@ public class Sala {
 						asientos[fil][col].setOcupante(e);
 					}
 				}
+				else {
+					System.out.println("Dinero o edad inválidos.");
+				}
 				
 			}
 		}
 	}
 	private boolean lleno() {
-		for(int i=0; i<nFilas; i++) {
-			for(int j=0; j<nColumnas; j++) {
+		for(int i=0; i<asientos.length; i++) {
+			for(int j=0; j<asientos[0].length; j++) {
 				if(asientos[i][j] == null) {
 					return false;
 				}
