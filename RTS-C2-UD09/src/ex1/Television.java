@@ -35,7 +35,7 @@ public class Television extends Electrodomestico{
 		super.precioFinal();
 		
 		if(this.resolucion > 40) {
-			precioFinal +=(precioFinal * 0.3);
+			precioFinal +=(precioBase * 0.3);
 		}
 		if(this.tdt) {
 			precioFinal += precioFinal + 50;
