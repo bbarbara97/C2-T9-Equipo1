@@ -25,10 +25,10 @@ public class mainApp {
 		double precioTvs=0, precioLavadoras = 0;
 		for(int i =0; i<10; i++) {
 
-			if(electrodomesticos[i] instanceof Lavadora) {
+			if(electrodomesticos[i] instanceof Television) {
 				precioTvs += electrodomesticos[i].getPrecioFinal();
 			}
-			if(electrodomesticos[i] instanceof Television) {
+			if(electrodomesticos[i] instanceof Lavadora) {
 				precioLavadoras += electrodomesticos[i].getPrecioFinal();
 			}
 		}
