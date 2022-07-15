@@ -1,9 +1,16 @@
 package ex5;
 
 public class Estudiante extends Persona{
-	
+
 	private Double calificaion; 	//0 - 10
 
+	//Constructores
+	public Estudiante(Double calificaion) {
+		super();
+		this.calificaion = calificaion;
+	}
+
+	//Metodos
 	private void comprobarCalificacion(Double calificacion) {
 		if(calificacion<0) {
 			this.calificaion = 0.0;
@@ -13,11 +20,11 @@ public class Estudiante extends Persona{
 			this.calificaion = calificacion;
 		}
 	}
-	
+
 	@Override
 	public boolean estaDisponible() {
 		int num = (int) (2 * Math.random());
-		
+
 		if(num<1)		//50%
 			return false;
 		else
