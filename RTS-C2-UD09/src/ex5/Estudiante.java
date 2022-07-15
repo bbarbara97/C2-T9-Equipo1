@@ -30,4 +30,9 @@ public class Estudiante extends Persona{
 		else
 			return true;
 	}
+
+	public Double getCalificaion() {
+		return calificaion;
+	}
+	
 }
