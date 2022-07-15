@@ -37,27 +37,34 @@ public class Raices {
 
 	public void calcular(){
 		
-		//Resultado erroneo
-		double resultado =	(-b-Math.sqrt(getDiscriminante())/(2*a));
-		double resultado1 = (-b+Math.sqrt(getDiscriminante())/(2*a));
+		if(tieneRaices() == true) {
+		
+		double resultado =	(-b-Math.sqrt(getDiscriminante()))/(2*a);
+		double resultado1 = (-b+Math.sqrt(getDiscriminante()))/(2*a);
 		
 		System.out.println("Las soluciones posibles són: " +resultado+ " o " +resultado1);
 		
+		} else if(tieneRaiz() ==  true) {
+			double resultado2 =	(-b/(2*a));
+			System.out.println("Las soluciones posibles són: " +resultado2);
+		}
 	}
 
 	public void obtenerRaices(){
-		
-		double resultado= -getDiscriminante();
-		double resultado1 = +getDiscriminante();
+	
+		if(tieneRaices() == true) {
+		double resultado= -Math.sqrt(getDiscriminante());
+		double resultado1 = +Math.sqrt(getDiscriminante());
 		
 		System.out.println("Las soluciones posibles són: " +resultado+ " o " +resultado1);
-
+		}
 	}
 
 	public void obtenerRaiz(){
 		if(tieneRaiz() == true) {
 			
-			System.out.println("Las soluciones posibles són: " +getDiscriminante());
+			double resultado1 = +Math.sqrt(getDiscriminante());
+			System.out.println("Las soluciones posibles són: " +resultado1);
 		}
 
 	}
