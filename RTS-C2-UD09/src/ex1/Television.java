@@ -29,6 +29,19 @@ public class Television extends Electrodomestico{
 		this.tdt = tdt;
 	}
 	
+	//Metodos
+	public void precioFinal() {
+		
+		super.precioFinal();
+		
+		if(this.resolucion > 40) {
+			precioFinal +=(precioFinal * 0.3);
+		}
+		if(this.tdt) {
+			precioFinal += precioFinal + 50;
+		}
+	}
+	
 	//Getters
 	public double getResolucion() {
 		return resolucion;
@@ -39,6 +52,6 @@ public class Television extends Electrodomestico{
 	}
 	
 	
-	//Metodos
+	
 	
 }
