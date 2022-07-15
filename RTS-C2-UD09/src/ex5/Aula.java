@@ -8,7 +8,7 @@ public class Aula {
 	private int id;
 	private int maxEstudiantes;
 	private String[] arrayMaterias = {"matemáticas", "filosofía", "física"};
-	private final ArrayList<String> materias = new ArrayList<>(Arrays.asList(arrayMaterias));
+	private final ArrayList<String> MATERIAS = new ArrayList<>(Arrays.asList(arrayMaterias));
 	Profesor profesor;
 	Estudiante estudiantes[];
 
@@ -25,7 +25,7 @@ public class Aula {
 
 	//Métodos
 	public void darClase(Aula aula) {
-		if(aula.getProfesor().estaDisponible() == true && aula.getMaterias().equals(aula.getProfesor().MATERIAS) && aula.getEstudiantes().length >= (aula.getMaxEstudiantes() / 2)){
+		if(aula.getProfesor().estaDisponible() == true && aula.getMATERIAS().equals(aula.getProfesor().getMateria()) && aula.getEstudiantes().length >= (aula.getMaxEstudiantes() / 2)){
 			System.out.println("Si se puede dar la clase.");
 			
 		} else {
@@ -67,8 +67,8 @@ public class Aula {
 		this.estudiantes = estudiantes;
 	}
 
-	public ArrayList<String> getMaterias() {
-		return materias;
+	public ArrayList<String> getMATERIAS() {
+		return MATERIAS;
 	}
 	
 	
