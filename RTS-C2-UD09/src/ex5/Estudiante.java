@@ -2,22 +2,22 @@ package ex5;
 
 public class Estudiante extends Persona{
 
-	private Double calificaion; 	//0 - 10
+	private Double calificacion; 	//0 - 10
 
 	//Constructores
-	public Estudiante(String nombre, int edad, String sexo, Double calificaion) {
+	public Estudiante(String nombre, int edad, String sexo, Double calificacion) {
 		super(nombre,edad,sexo);
-		this.calificaion = calificaion;
+		comprobarCalificacion(calificacion);
 	}
 
 	//Metodos
 	private void comprobarCalificacion(Double calificacion) {
 		if(calificacion<0) {
-			this.calificaion = 0.0;
+			this.calificacion = 0.0;
 		}else if(calificacion>10) {
-			this.calificaion = 10.0;
+			this.calificacion = 10.0;
 		}else {
-			this.calificaion = calificacion;
+			this.calificacion = calificacion;
 		}
 	}
 
@@ -32,7 +32,7 @@ public class Estudiante extends Persona{
 	}
 
 	public Double getCalificaion() {
-		return calificaion;
+		return calificacion;
 	}
 	
 }

@@ -1,8 +1,5 @@
 package ex5;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Aula {
 	
 	private int id;
@@ -14,7 +11,6 @@ public class Aula {
 	//Constructores
 	
 	public Aula(int id, int maxEstudiantes, String materia, Profesor profesor, Estudiante[] estudiantes) {
-		super();
 		this.id = id;
 		this.maxEstudiantes = maxEstudiantes;
 		this.materia = materia;
@@ -64,33 +60,17 @@ public class Aula {
 	public int getId() {
 		return id;
 	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
+	
 	public int getMaxEstudiantes() {
 		return maxEstudiantes;
-	}
-
-	public void setMaxEstudiantes(int maxEstudiantes) {
-		this.maxEstudiantes = maxEstudiantes;
 	}
 
 	public Profesor getProfesor() {
 		return profesor;
 	}
 
-	public void setProfesor(Profesor profesor) {
-		this.profesor = profesor;
-	}
-
 	public Estudiante[] getEstudiantes() {
 		return estudiantes;
-	}
-
-	public void setEstudiantes(Estudiante[] estudiantes) {
-		this.estudiantes = estudiantes;
 	}
 
 	public String getMaterias() {
