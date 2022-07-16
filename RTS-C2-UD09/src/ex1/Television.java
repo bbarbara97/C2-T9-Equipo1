@@ -2,12 +2,12 @@ package ex1;
 
 public class Television extends Electrodomestico{
 
-	private Double resolucion;
-	private boolean tdt;
-	
 	//Constantes
 	private final double RESOLUCION_D = 20.0;
 	private final boolean TDT_D = false;
+	
+	private Double resolucion = RESOLUCION_D;
+	private boolean tdt = TDT_D;
 	
 	
 	//Constructores
@@ -17,7 +17,7 @@ public class Television extends Electrodomestico{
 	}
 	
 	
-	public Television(Double precioBase, Double peso, Double resolucion, boolean tdt) {
+	public Television(Double precioBase, Double peso) {
 		super(precioBase,peso);
 		this.resolucion = RESOLUCION_D;
 		this.tdt = TDT_D;

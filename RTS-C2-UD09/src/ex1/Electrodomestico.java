@@ -22,6 +22,11 @@ public class Electrodomestico {
 
 
 	public Electrodomestico() {
+		this.precioBase = PRECIO_D;
+		this.peso = PESO_D;
+		this.color = COLOR_D;
+		this.consumo = CONSUMO_D;
+		this.precioFinal = precioBase;
 	}
 
 
@@ -35,7 +40,7 @@ public class Electrodomestico {
 	public Electrodomestico(Double precioBase, Double peso, String color, char consumo) {
 		this.precioBase = precioBase;
 		this.peso = peso;
-		this.color = color;
+		comprobarColor(color);
 		comprobarConsumoEnergetico(consumo);
 		this.precioFinal = precioBase;
 	}

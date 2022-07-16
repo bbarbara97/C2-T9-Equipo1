@@ -2,9 +2,9 @@ package ex1;
 
 public class Lavadora extends Electrodomestico{
 
-	private Double carga;
-
 	private final double CARGA_D = 5.0;
+	
+	private Double carga = CARGA_D;
 
 	//Constructores
 	public Lavadora() {

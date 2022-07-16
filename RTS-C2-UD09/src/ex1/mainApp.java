@@ -5,7 +5,11 @@ public class mainApp {
 	public static void main(String[] args) {
 
 		Electrodomestico[] electrodomesticos = new Electrodomestico[10];
-
+		registrarElectrodomestico(electrodomesticos);
+		utilidades(electrodomesticos);
+	}
+	
+	public static void registrarElectrodomestico(Electrodomestico[] electrodomesticos) {
 		electrodomesticos[0] = new Lavadora(150.0, 200.0, "blanco", 'C',40.0);
 		electrodomesticos[1] = new Lavadora(150.0, 10.0, "rojo", 'B',60.0);
 		electrodomesticos[2] = new Lavadora(150.0, 25.0, "azul", 'F',30.0);
@@ -17,7 +21,9 @@ public class mainApp {
 		electrodomesticos[7] = new Television(150.0, 25.0, "gris", 'A',50.0, true);
 		electrodomesticos[8] = new Television(150.0, 45.0, "blanco", 'J',20.0, false);
 		electrodomesticos[9] = new Television(150.0, 150.0, "negro", 'E',40.0, true);
-
+	}
+	
+	public static void utilidades(Electrodomestico[] electrodomesticos) {
 		for(int i = 0; i < 10; i++) {
 			electrodomesticos[i].precioFinal();
 		}
@@ -43,9 +49,7 @@ public class mainApp {
 		}
 		System.out.print("El precio total de los electrodomesticos es: " + precioSuma + " €");
 
-
 	}
-
 
 
 }
