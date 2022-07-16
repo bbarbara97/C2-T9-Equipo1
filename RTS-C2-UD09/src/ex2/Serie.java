@@ -58,10 +58,10 @@ public class Serie implements Entregable{
 
 		if(this.nTemporadas ==((Serie) a).getnTemporadas()) {
 			//Las horas son iguales
-			estado =0;
+			estado = 0;
 		}else if (this.nTemporadas>((Serie) a).getnTemporadas()) {
 			//El objeto 1 es mayor que la pasada por parametro
-			estado=1;
+			estado = 1;
 		}
 		return estado;
 	}

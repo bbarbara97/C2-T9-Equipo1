@@ -47,7 +47,7 @@ public class Videojuego implements Entregable {
 	}
 
 	public boolean isEntregado() {
-		return true;
+		return this.entregado;
 	}
 
 	public int compareTo(Object a) {
@@ -56,10 +56,10 @@ public class Videojuego implements Entregable {
 
 		if(this.nHoras==((Videojuego) a).getnHoras()) {
 			//Las horas son iguales
-			estado =0;
+			estado = 0;
 		}else if (this.nHoras>((Videojuego) a).getnHoras()) {
 			//El objeto 1 es mayor que la pasada por parametro
-			estado=1;
+			estado = 1;
 		}
 		return estado;
 	}
