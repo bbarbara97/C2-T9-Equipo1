@@ -9,8 +9,8 @@ public class Espectador {
 	
 	public Espectador(String nombre) {
 		this.nombre = nombre;
-		this.edad = (int) (Math.random()*25+1);
-		this.dinero = (Double) (Math.random()*20+1);
+		this.edad = (int) (Math.random()*25+4);		//edad min 4 max 28
+		this.dinero = (Double) (Math.random()*20+4);//dinero min 3 max 23
 	}
 
 

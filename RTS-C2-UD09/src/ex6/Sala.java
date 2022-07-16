@@ -1,28 +1,37 @@
 package ex6;
 
+import java.util.ArrayList;
+import java.util.Hashtable;
+
 public class Sala {
 
 	private int nFilas;			
 	private int nColumnas;		//Max 25
 	private Double precio;
 	private Pelicula pelicula;
-	private Asiento[][] asientos = new Asiento[nFilas][nColumnas];
+	private Asiento[][] asientos; //= new Asiento[nFilas][nColumnas];
+	
+	private Hashtable<String, Asiento> asientosDisponibles = new Hashtable<String, Asiento>();
+	private ArrayList<String> keysAsientosDisponibles = new ArrayList<String>();
+	private Hashtable<String, Asiento> asientosOcupados = new Hashtable<String, Asiento>();
+	private ArrayList<String> keysAsientosOcupados = new ArrayList<String>();
 
 	public Sala(int nFilas, int nColumnas, Double precio, Pelicula pelicula) {
 		this.nFilas = nFilas;
 		comprobarNColumnas(nColumnas);
 		this.precio = precio;
 		this.pelicula = pelicula;
-		crearSala(nFilas, nColumnas);
+		this.asientos = new Asiento[this.nFilas][this.nColumnas];
+		crearSala(this.nFilas, this.nColumnas);
 	}
 
 	public void crearSala(int nFilas, int nColumnas) {
-		int filas = asientos.length;
-		for(int i=0; i<asientos.length; i++) {
-			for(int j=0; j<asientos[0].length; j++) {
-				asientos[i][j] = new Asiento(filas, (char)(j+65));
+		for(int i=0; i<nFilas; i++) {
+			for(int j=0; j<nColumnas; j++) {
+				asientos[i][j] = new Asiento(i+1, (char)(j+65));
+				asientosDisponibles.put(Integer.toString(i+1) + (char)(j+65), asientos[i][j]);
+				keysAsientosDisponibles.add(Integer.toString(i+1) + (char)(j+65));
 			}
-			filas--;
 		}
 	}
 
@@ -40,36 +49,52 @@ public class Sala {
 		return totalAsientos;
 	}
 
-	public int asientosOcupados(){
-		int totalOcupados = 0;
-		for(int i=0; i>=numAsientos(); i++) {
-			//totalOcupados += llenarSala();
-		}
-		return totalOcupados;
+	public int numAsientosOcupados(){
+		return asientosOcupados.size();
+	}
+	
+	public int numAsientosDisponibles(){
+		return asientosDisponibles.size();
 	}
 
+	private void sentarEspectador(Espectador espectador) {
+		int pos = (int) (keysAsientosDisponibles.size() * Math.random());
+		String key = keysAsientosDisponibles.get(pos);
+		
+		int fil = asientosDisponibles.get(key).getFila()-1;
+		int col = asientosDisponibles.get(key).getColumna()-65;
+		
+		asientos[fil][col].llenarAsiento(espectador);
+		
+		keysAsientosDisponibles.remove(pos);
+		keysAsientosOcupados.add(key);
+		asientosOcupados.put(key, asientos[fil][col]);
+		asientosDisponibles.remove(key);
+	}
+	
 	public void llenarSala(Espectador[] espectadores) {
-
+		
 		if(lleno() == false) {
 			for(Espectador e:espectadores) {
-				int col =(int) (Math.random()*25+1);
-				int fil = (int) (Math.random()*10+1);
-				if(e.getDinero() >= this.precio && e.getEdad() >= pelicula.getEdadMinima()) {
-					if(asientos[fil][col] == null) {
-						asientos[fil][col].setOcupante(e);
-					}
-				}
-				else {
-					System.out.println("Dinero o edad inválidos.");
+				if(lleno() == false) {
+					
+					if(e.getDinero() >= this.precio && e.getEdad() >= pelicula.getEdadMinima())
+						sentarEspectador(e);
+					else
+						System.out.println("Dinero o edad inválidos. - " + e.getEdad() + " años " + String.format("%.2f", e.getDinero())  + " €");
+					
+				}else {
+					System.out.println("Sala llena");
 				}
 				
 			}
 		}
 	}
+	
 	public boolean lleno() {
-		for(int i=0; i<asientos.length; i++) {
-			for(int j=0; j<asientos[0].length; j++) {
-				if(asientos[i][j] == null) {
+		for(int i=0; i<nFilas; i++) {
+			for(int j=0; j<nColumnas; j++) {
+				if(asientos[i][j].isDisponible()) {
 					return false;
 				}
 			}
@@ -77,19 +102,11 @@ public class Sala {
 		return true;
 	}
 	
-	public void asientosTotal() {
+	public void MostrarAsientosTotal() {
 		System.out.println("Hay en total: "+ (nColumnas * nFilas) + " asientos.");
 		
-		int cont = 0;
-		for(int i=0; i<asientos.length; i++) {
-			for(int j=0; j<asientos[0].length; j++) {
-				if(asientos[i][j] != null) {
-					cont++;
-					break;
-				}
-			}
-		}
-		System.out.println("Hay en total: " + cont + " asientos ocupados.");
+		System.out.println("Hay en total: " + numAsientosOcupados() + " asientos ocupados.");
+		System.out.println("Hay en total: " + numAsientosDisponibles() + " asientos disponibles.");
 	}
 
 	public int getnFilas() {
