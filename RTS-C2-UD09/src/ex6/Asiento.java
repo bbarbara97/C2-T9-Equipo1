@@ -8,7 +8,7 @@ public class Asiento {
 	private Espectador ocupante;
 	private String id;
 	
-
+	//Constructor
 	public Asiento(int fila, char columna) {
 		
 		this.fila = fila;
@@ -16,6 +16,7 @@ public class Asiento {
 		this.id = Integer.toString(fila) + columna;
 	}
 
+	//Métodos
 	public void llenarAsiento(Espectador ocupante) {
         if(isDisponible()) {
             this.ocupante = ocupante;
@@ -25,35 +26,16 @@ public class Asiento {
         }
     }
 
+	//Getters
 	public int getFila() {
 		return fila;
 	}
-
 
 	public char getColumna() {
 		return columna;
 	}
 
-
 	public boolean isDisponible() {
 		return disponible;
 	}
-
-
-	public Espectador getOcupante() {
-		return ocupante;
-	}
-
-
-	public String getId() {
-		return id;
-	}
-
-	public void setOcupante(Espectador ocupante) {
-		this.ocupante = ocupante;
-	}
-	
-	
-	
-	
 }

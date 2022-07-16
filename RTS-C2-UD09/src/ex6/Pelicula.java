@@ -7,7 +7,7 @@ public class Pelicula {
 	private int edadMinima;
 	private int duracion; 	//minutos
 	
-	
+	//Constructor
 	public Pelicula(String titulo, String director, int edadMinima, int duracion) {
 		this.titulo = titulo;
 		this.director = director;
@@ -15,27 +15,8 @@ public class Pelicula {
 		this.duracion = duracion;
 	}
 
-
-	public String getTitulo() {
-		return titulo;
-	}
-
-
-	public String getDirector() {
-		return director;
-	}
-
-
+	//Getters
 	public int getEdadMinima() {
 		return edadMinima;
 	}
-
-
-	public int getDuracion() {
-		return duracion;
-	}
-	
-	
-	
-	
 }

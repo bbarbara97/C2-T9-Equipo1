@@ -16,6 +16,7 @@ public class Sala {
 	private Hashtable<String, Asiento> asientosOcupados = new Hashtable<String, Asiento>();
 	private ArrayList<String> keysAsientosOcupados = new ArrayList<String>();
 
+	//Constructor
 	public Sala(int nFilas, int nColumnas, Double precio, Pelicula pelicula) {
 		this.nFilas = nFilas;
 		comprobarNColumnas(nColumnas);
@@ -25,6 +26,7 @@ public class Sala {
 		crearSala(this.nFilas, this.nColumnas);
 	}
 
+	//Métodos
 	public void crearSala(int nFilas, int nColumnas) {
 		for(int i=0; i<nFilas; i++) {
 			for(int j=0; j<nColumnas; j++) {
@@ -41,12 +43,6 @@ public class Sala {
 		}else {
 			this.nColumnas = nColumnas;
 		}
-	}
-
-	public int numAsientos() {
-		int totalAsientos = 0;
-		totalAsientos = nColumnas*nFilas;
-		return totalAsientos;
 	}
 
 	public int numAsientosOcupados(){
@@ -109,6 +105,7 @@ public class Sala {
 		System.out.println("Hay en total: " + numAsientosDisponibles() + " asientos disponibles.");
 	}
 
+	//Getters
 	public int getnFilas() {
 		return nFilas;
 	}
@@ -127,7 +124,4 @@ public class Sala {
 	public Pelicula getPelicula() {
 		return pelicula;
 	}
-
-
-
 }
