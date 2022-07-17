@@ -7,15 +7,15 @@ package ex3;
  */
 
 public class Libro {
-	
+
 	/**ATRIBUTOS**/
 	private String isbn;
 	private String titulo;
 	private String autor;
 	private int nPaginas;
-	
+
 	/**CONSTRUCTOR**/
-	
+
 	/**
 	 *  Constructor con 4 parametros
 	 * @param isbn
@@ -29,10 +29,10 @@ public class Libro {
 		this.autor = autor;
 		this.nPaginas = nPaginas;
 	}
-	
-	
+
+
 	/**GETTERS & SETTERS**/
-	
+
 	public String getIsbn() {
 		return isbn;
 	}
@@ -57,15 +57,10 @@ public class Libro {
 	public void setnPaginas(int nPaginas) {
 		this.nPaginas = nPaginas;
 	}
-	
+
 	//Muestra la informacion del libro
 	@Override
 	public String toString() {
 		return "El libro con ISBN " +isbn+ " creado por el autor " + autor + " tiene " +  nPaginas + " páginas.";
-	}
-	
-	
-	
-	
-	
+	}	
 }
