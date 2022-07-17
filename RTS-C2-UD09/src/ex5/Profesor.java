@@ -30,7 +30,7 @@ public class Profesor extends Persona{
 	 */
 	public Profesor(String nombre, int edad, String sexo, String materia) {
 		super(nombre,edad,sexo);
-		this.materia = materia;
+		comprobarMateria(materia);
 	}
 
 	/*METODOS*/
