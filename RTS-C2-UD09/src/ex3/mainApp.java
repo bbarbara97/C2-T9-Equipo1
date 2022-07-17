@@ -1,15 +1,23 @@
 package ex3;
 
+/**
+ * Clase ejecutable
+ * @author Bárbara, Pau, Oriol
+ */
 public class mainApp {
 
 	public static void main(String[] args) {
-
+		
+		//Creamos 1 array de libro
 		Libro[] Libros = new Libro[2];
+		
+		//Llamamos a los metodos
 		rellenarArray(Libros);
 		masPaginas(Libros);
 	}
 	
 	public static void rellenarArray(Libro[] Libros) {
+		//Creamos un objeto de cada posicion del array y lo imprimimos por consola
 		Libros[0] = new Libro("1234567891012", "Fundación Esplai", "Bárbara", 200);
 		Libros[1] = new Libro("9876543210123", "T-Systems", "Pau", 100);
 		
@@ -18,6 +26,7 @@ public class mainApp {
 	}
 	
 	public static void masPaginas(Libro[] Libros) {
+		//Comparamos quien tiene mas paginas y lo im
 		if(Libros[0].getnPaginas()>Libros[1].getnPaginas()) {
 			System.out.println("El libro con más paginas es: " + Libros[0].toString());
 		} else if(Libros[0].getnPaginas()<Libros[1].getnPaginas()){
