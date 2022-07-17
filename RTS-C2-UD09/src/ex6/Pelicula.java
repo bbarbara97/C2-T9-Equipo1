@@ -1,5 +1,10 @@
 package ex6;
 
+/**
+ * Clase Pelicula
+ * Contiene información de la Pelicula
+ * @author Bárbara, Pau, Oriol
+ */
 public class Pelicula {
 	
 	private String titulo;
@@ -7,7 +12,15 @@ public class Pelicula {
 	private int edadMinima;
 	private int duracion; 	//minutos
 	
-	//Constructor
+	/**CONSTRUCTOR**/
+	
+	/**
+	 * Constructor con 4 parametros
+	 * @param titulo
+	 * @param director
+	 * @param edadMinima
+	 * @param duracion
+	 */
 	public Pelicula(String titulo, String director, int edadMinima, int duracion) {
 		this.titulo = titulo;
 		this.director = director;
@@ -15,7 +28,7 @@ public class Pelicula {
 		this.duracion = duracion;
 	}
 
-	//Getters
+	/**GETTERS**/
 	public int getEdadMinima() {
 		return edadMinima;
 	}
