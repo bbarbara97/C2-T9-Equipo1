@@ -2,7 +2,7 @@ package ex1;
 
 /**
  * Clase ejecutable
- * @author Barbra, Pau, Oriol
+ * @author Bárbara, Pau, Oriol
  */
 public class mainApp {
 

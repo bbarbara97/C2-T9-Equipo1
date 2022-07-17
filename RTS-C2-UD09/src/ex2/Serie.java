@@ -1,19 +1,29 @@
 package ex2;
 
+/**
+ * Clase Serie
+ * Contiene informacion de una serie
+ * @author Bárbara, Pau, Oriol
+ *
+ */
+
 public class Serie implements Entregable{
 
+	/**ATRIBUTOS**/
 	protected String titulo;
 	protected int nTemporadas;
 	protected boolean entregado;
 	protected String genero;
 	protected String creador;
 
-	//Constantes
+	/**CONSTANTES**/
 	protected final int N_TEMPORADAS = 3;
 	protected final boolean ENTREGADO_D = false;
 
 
-	//Constructores
+	/**CONSTRUCTORES**/
+	
+	//Constructor por defecto
 	public Serie() {
 		this.titulo = "";
 		this.nTemporadas = N_TEMPORADAS;
@@ -22,6 +32,11 @@ public class Serie implements Entregable{
 		this.creador = "";
 	}
 
+	/**
+	 * Constructor con 2 parametros
+	 * @param titulo
+	 * @param creador
+	 */
 	public Serie(String titulo, String creador) {
 		this.titulo = titulo;
 		this.nTemporadas = N_TEMPORADAS;
@@ -29,7 +44,14 @@ public class Serie implements Entregable{
 		this.genero = "";
 		this.creador = creador;
 	}
-
+	
+	/**
+	 * Constructor con 4 parametros
+	 * @param titulo
+	 * @param nTemporadas
+	 * @param genero
+	 * @param creador
+	 */
 	public Serie(String titulo, int nTemporadas, String genero, String creador) {
 		this.titulo = titulo;
 		this.nTemporadas = nTemporadas;
@@ -38,22 +60,25 @@ public class Serie implements Entregable{
 		this.creador = creador;
 	}
 
-	//Métodos
+	/**	METODOS **/
+	
+	//Cambia el estado de entregado a true
 	public void entregar() {
 		this.entregado = true;
 	}
-
+	
+	//Cambia el estado de entregado a false
 	public void devolver() {
 		this.entregado = false;
 	}
-
+	
+	//Indica el estado de entregado
 	public boolean isEntregado() {
-
 		return this.entregado;
 	}
-
+	
+	//Compara dos series segun su numero de temporadas
 	public int compareTo(Object a) {
-
 		int estado =-1;
 
 		if(this.nTemporadas ==((Serie) a).getnTemporadas()) {
@@ -66,8 +91,7 @@ public class Serie implements Entregable{
 		return estado;
 	}
 
-
-	//Getters y Setters
+	/**GETTERS & SETTERS**/
 
 	public String getTitulo() {
 		return titulo;
@@ -101,12 +125,10 @@ public class Serie implements Entregable{
 		this.creador = creador;
 	}
 
+	//Muestra la informacion de la Serie
 	@Override
 	public String toString() {
 		return "Serie [titulo=" + titulo + ", nTemporadas=" + nTemporadas + ", entregado=" + entregado + ", genero="
 				+ genero + ", creador=" + creador + "]";
 	}
-
-
-
 }

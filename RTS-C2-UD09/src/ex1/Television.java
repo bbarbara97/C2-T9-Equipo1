@@ -3,15 +3,15 @@ package ex1;
 /**
  * Clase Television
  * Contiene informacion de television
- * @author Barbra, Pau, Oriol
+ * @author Bárbara, Pau, Oriol
  */
 public class Television extends Electrodomestico{
 
-	/*CONSTANTES*/
+	/**CONSTANTES**/
 	private final double RESOLUCION_D = 20.0;
 	private final boolean TDT_D = false;
 	
-	/*ATRIBUTOS*/
+	/**ATRIBUTOS**/
 	private Double resolucion = RESOLUCION_D;
 	private boolean tdt = TDT_D;
 	

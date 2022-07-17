@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Superclase electrodomesticos
  *Contiene informacion de los electrodomesticos
- * @author Barbra, Pau, Oriol
+ * @author Bárbara, Pau, Oriol
  */
 public class Electrodomestico {
 	
@@ -19,7 +19,7 @@ public class Electrodomestico {
 	protected final String COLOR_D = "blanco";
 	protected final char CONSUMO_D = 'F';
 	
-	//Atributos
+	/**ATRIBUTOS**/
 	protected Double precioBase = PRECIO_D;
 	protected Double precioFinal = precioBase;
 	protected Double peso = PESO_D;

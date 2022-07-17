@@ -3,14 +3,14 @@ package ex1;
 /**
  * Clase Lavadora
  * Contiene informacion de lavadora
- * @author Barbra, Pau, Oriol
+ * @author Bárbara, Pau, Oriol
  */
 public class Lavadora extends Electrodomestico{
 	
-	/*CONSTANTES*/
+	/**CONSTANTE**/
 	private final double CARGA_D = 5.0;
 	
-	/*ATRIBUTOS*/
+	/**ATRIBUTO**/
 	private Double carga = CARGA_D;
 	
 	/**CONSTRUCTORES**/

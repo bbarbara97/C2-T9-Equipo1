@@ -1,18 +1,28 @@
 package ex2;
 
-public class Videojuego implements Entregable {
+/**
+ * Clase Videojuego
+ * Contiene informacion de un videojuego
+ * @author Bárbara, Pau, Oriol
+ *
+ */
 
+public class Videojuego implements Entregable {
+	
+	/**ATRIBUTOS**/
 	protected String titulo;
 	protected int nHoras;
 	protected boolean entregado;
 	protected String genero;
 	protected String compañia;
 
-	//Constantes
+	/**CONSTANTES**/
 	protected final int N_HORAS = 10;
 	protected final boolean ENTREGADO_D = false;
 
-	//Constructores
+	/**CONSTRUCTORES**/
+	
+	//Constructor por defecto
 	public Videojuego() {
 		this.titulo = "";
 		this.nHoras = N_HORAS;
@@ -20,7 +30,12 @@ public class Videojuego implements Entregable {
 		this.genero = "";
 		this.compañia = "";
 	}
-
+	
+	/**
+	 * Constructor con 2 parametros
+	 * @param titulo
+	 * @param nHoras
+	 */
 	public Videojuego(String titulo, int nHoras) {
 		this.titulo = titulo;
 		this.nHoras = nHoras;
@@ -28,7 +43,14 @@ public class Videojuego implements Entregable {
 		this.genero = "";
 		this.compañia = "";
 	}
-
+	
+	/**
+	 * Constructor con 4 parametros
+	 * @param titulo
+	 * @param nHoras
+	 * @param genereo
+	 * @param compañia
+	 */
 	public Videojuego(String titulo, int nHoras, String genereo, String compañia) {
 		this.titulo = titulo;
 		this.nHoras = nHoras;
@@ -37,21 +59,25 @@ public class Videojuego implements Entregable {
 		this.compañia = compañia;
 	}
 
-	//Métodos
+	/**	METODOS **/
+	
+	//Cambia el estado de entregado a true
 	public void entregar() {
 		entregado = true;
 	}
 
+	//Cambia el estado de entregado a false
 	public void devolver() {
 		entregado = false;
 	}
-
+	
+	//Indica el estado de entregado
 	public boolean isEntregado() {
 		return this.entregado;
 	}
-
+	
+	//Compara dos videojuegos segun su numero de horas
 	public int compareTo(Object a) {
-
 		int estado =-1;
 
 		if(this.nHoras==((Videojuego) a).getnHoras()) {
@@ -64,7 +90,8 @@ public class Videojuego implements Entregable {
 		return estado;
 	}
 
-	//Getters y Setters	
+	/**GETTERS & SETTERS**/
+	
 	public String getTitulo() {
 		return titulo;
 	}
@@ -97,6 +124,7 @@ public class Videojuego implements Entregable {
 		this.compañia = compañia;
 	}
 
+	//Muestra la informacion del videojuego
 	@Override
 	public String toString() {
 		return "Videojuego [titulo=" + titulo + ", nHoras=" + nHoras + ", entregado=" + entregado + ", genero="
