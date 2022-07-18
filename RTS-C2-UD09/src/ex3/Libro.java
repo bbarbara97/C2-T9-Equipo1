@@ -1,22 +1,38 @@
 package ex3;
 
+/**
+ * Clase Libro
+ * Contiene informacion de un Libro
+ * @author Bárbara, Pau, Oriol
+ */
+
 public class Libro {
 
+	/**ATRIBUTOS**/
 	private String isbn;
 	private String titulo;
 	private String autor;
 	private int nPaginas;
-	
-	//Constructor
+
+	/**CONSTRUCTOR**/
+
+	/**
+	 *  Constructor con 4 parametros
+	 * @param isbn
+	 * @param titulo
+	 * @param autor
+	 * @param nPaginas
+	 */
 	public Libro(String isbn, String titulo, String autor, int nPaginas) {
 		this.isbn = isbn;
 		this.titulo = titulo;
 		this.autor = autor;
 		this.nPaginas = nPaginas;
 	}
-	
-	
-	//Getters y Setters
+
+
+	/**GETTERS & SETTERS**/
+
 	public String getIsbn() {
 		return isbn;
 	}
@@ -41,14 +57,10 @@ public class Libro {
 	public void setnPaginas(int nPaginas) {
 		this.nPaginas = nPaginas;
 	}
-	
+
+	//Muestra la informacion del libro
 	@Override
 	public String toString() {
 		return "El libro con ISBN " +isbn+ " creado por el autor " + autor + " tiene " +  nPaginas + " páginas.";
-	}
-	
-	
-	
-	
-	
+	}	
 }

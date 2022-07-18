@@ -1,5 +1,9 @@
 package ex2;
 
+/**
+ * Interface Entregable
+ * @author Bárbara, Pau, Oriol
+ */
 public interface Entregable {
 
 	public void entregar();
